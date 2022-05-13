@@ -7,9 +7,7 @@ All small project goes in here :)
 The place where all of my exercise work@help requires needed
 
 ```bash
-npm install react react-dom
-npm install -g parcel
-npm install date-fns
+Planning to convert all my learning progress to a blog soon :)
 ```
 
 
