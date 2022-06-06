@@ -1,2 +1,2 @@
 # Text Animation
-![](https://imgur.com/a/MfEHQpF)
+![](https://giphy.com/embed/A6MTQJw6w13Rf3735R)
