@@ -1,2 +1,2 @@
 # Text Animation
-![](https://giphy.com/embed/A6MTQJw6w13Rf3735R)
+![](https://github.com/lilhalzy/Dump/blob/main/animation/text-animation/QuickLook_m5Alz0MzCI.gif)
