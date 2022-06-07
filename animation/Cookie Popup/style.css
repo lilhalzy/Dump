@@ -24,6 +24,7 @@ body {
   padding: 1rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
+  overflow: hidden;
 }
 
 .text {
