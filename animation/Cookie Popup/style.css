@@ -54,4 +54,5 @@ button {
   color: #4f2626;
   font-family: 'Poppins', sans-serif;
   border-radius: .7rem;
+  cursor: pointer;
 }
