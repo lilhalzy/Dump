@@ -37,18 +37,19 @@ body {
 
 .cookie-title {
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 800;
 }
 
 .cookie-subtitle {
   font-weight: 200;
   padding: .5rem 0;
+  font-size: .8rem;
 }
 
 button {
   border: none;
-  padding: .5rem 1rem;
+  padding: .4rem 1rem;
   color: #4f2626;
   font-family: 'Poppins', sans-serif;
   border-radius: .7rem;
