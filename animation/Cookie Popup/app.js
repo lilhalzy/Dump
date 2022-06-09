@@ -21,6 +21,8 @@ timelineOne.fromTo(".text", { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "<");
 
 const button = document.querySelector('button');
 
+timelineOne.fromTo('.cookie', {y: 0, rotation: '0deg'}, {y: -14, rotation:'-20deg', yoyo: true, repeat: -1})
+
 button.addEventListener('click', () => {
   gsap.to('.cookie-container', {opacity: 0, y: 100, duration: .75, ease: 'power1.out'})
 })
