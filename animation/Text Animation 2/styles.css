@@ -30,3 +30,37 @@ nav {
   height: 100%;
   object-fit: cover;
 }
+
+.cta{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.cta-text {
+  display: flex;
+  font-size: 2.2rem;
+}
+
+.cta-text span {
+  padding: 0 .4rem;
+  text-shadow: rgba(0,0,0,.25) 0 0 15px;
+}
+
+.cta-btn {
+  margin: 1rem;
+  padding: .4rem 1.8rem;
+  background: #fff;
+  /* box-shadow: .2rem .4rem red; */
+  font-family: "Poppins";
+  border-radius: .4rem;
+  color: rgb(33, 33, 33);
+  border: none;
+  font-size: .8rem;
+  cursor: pointer;
+}
