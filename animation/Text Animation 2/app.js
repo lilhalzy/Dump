@@ -24,4 +24,4 @@ letters.forEach(letter => {
 })
 
 gsap.set('.letter', {display: 'inline-block'});
-gsap.fromTo('.letter', {y: 30}, {y: 0, delay: 3, stagger: .05})
+gsap.fromTo('.letter', {y: '100%'}, {y: 0, delay: 3, stagger: .05, ease: 'back.out(2)'})
