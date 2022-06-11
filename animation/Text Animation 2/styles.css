@@ -18,6 +18,7 @@ nav {
 .logo {
   font-size: 1.4rem;
   color: rgb(33, 33, 33);
+  overflow: hidden;
 }
 
 .img-section {
