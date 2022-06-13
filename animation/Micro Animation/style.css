@@ -24,3 +24,7 @@ body {
   padding: 2rem;
   align-items: center;
 }
+
+.home-title, .notifications-title, .messages-title {
+  padding: 0 2rem;
+}
