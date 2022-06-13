@@ -3,3 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: linear-gradient(260deg, #95E600 10%, #E8E800);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  background: #fff;
+  padding: 5rem;
+  border-radius: 2rem;
+}
+
+.home, .notifications, .messages {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+}
