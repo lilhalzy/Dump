@@ -23,6 +23,7 @@ body {
   display: flex;
   padding: 2rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .home-title, .notifications-title, .messages-title {
