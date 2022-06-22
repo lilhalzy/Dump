@@ -5,8 +5,8 @@ const timeline = gsap.timeline({
 const home = document.querySelector(".home");
 const homeTitle = document.querySelector(".home-title");
 const homeLetters = homeTitle.textContent.split("");
-
 const notifications = document.querySelector(".notifications");
+const messages = document.querySelector('.messages')
 
 // Make the birds disappear before a click happens
 gsap.set(".feather", { scale: 0, transformOrigin: "center" });
@@ -62,3 +62,12 @@ notifications.addEventListener("click", () => {
     { scale: 1.3, opacity: 0, duration: 1 }
   );
 });
+
+gsap.set('.flap', { transformOrigin: 'top' })
+messages.addEventListener('click', () => {
+  timeline.fromTo('.messages-svg', { scale: 1 }, { scale: .9 })
+  timeline.fromTo('.flap', { scale: 1 }, { scale: -1 }, '<50%')
+  timeline.fromTo('.messages-svg', { scale: .9 }, { scale: 1 }, '<50%')
+  timeline.fromTo('.note', { y: 0, opacity: 1 }, { y: -40, opacity: 0, duration: .7 })
+  timeline.to('.flap', { scale: 1 }, '<90%')
+})
