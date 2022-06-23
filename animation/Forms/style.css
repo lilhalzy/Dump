@@ -21,7 +21,8 @@ form {
   min-height: 50vh;
   color: #777474;
   border-radius: 2rem;
-  padding: 2rem 3rem;
+  padding: 5rem 3rem;
+  display: flex;
 }
 
 .title {
@@ -54,4 +55,27 @@ form {
 .placeholder {
   position: relative;
   z-index: 1;
+  pointer-events: none;
+  padding: .3rem 0;
+  opacity: .4;
+}
+
+.line-svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.checkbox-label {
+  font-size: .8rem;
+}
+
+.promo-container {
+  position: relative;
+  display: flex;
+}
+
+.checkbox {
+  opacity: 0;
+  cursor: pointer;
 }
