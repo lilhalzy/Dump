@@ -5,3 +5,53 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #E7F207, #F7D700);
+}
+
+form {
+  background: #fff;
+  width: 50vw;
+  min-height: 50vh;
+  color: #777474;
+  border-radius: 2rem;
+  padding: 2rem 3rem;
+}
+
+.title {
+  color: #000;
+}
+
+.contact-right,
+.contact-left {
+  flex: 1;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: none;
+  top: 0;
+}
+
+.input-container {
+  position: relative;
+}
+
+.placeholder {
+  position: relative;
+  z-index: 1;
+}
