@@ -46,6 +46,7 @@ form {
   position: absolute;
   border: none;
   top: 0;
+  outline: none;
 }
 
 .input-container {
@@ -64,6 +65,8 @@ form {
   position: absolute;
   left: 0;
   bottom: 0;
+  overflow: visible;
+  opacity: .8;
 }
 
 .checkbox-container {
