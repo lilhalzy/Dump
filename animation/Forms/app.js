@@ -62,6 +62,15 @@ form.addEventListener("click", () => {
         });
       }
     }
+    // Validation
+    input.addEventListener('input', (e) => {
+      if(e.target.type === 'text') {
+        let inputText = e.target.value;
+        if(inputText.length > 2) {
+          // Color
+        }
+      }
+    })
   });
 });
 
@@ -74,4 +83,10 @@ function validateEmail(email) {
 function validatePhone(phone) {
   let re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
   return re.test(phone);
+}
+
+// Color for the input
+function colorInput(color, line, placeholder) {
+  gsap.to(line, {stroke: color, duration: .75})
+  gsap.to(placeholder, {color: color, duration: .75})
 }
