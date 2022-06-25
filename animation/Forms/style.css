@@ -59,6 +59,7 @@ form {
   pointer-events: none;
   padding: .3rem 0;
   opacity: .4;
+  transform-origin: left;
 }
 
 .line-svg {
