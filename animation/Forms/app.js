@@ -30,7 +30,7 @@ containers.forEach((container) => {
       );
       // Placeholder
       timeline.to(placeholder, {
-        top: -15,
+        top: -25,
         left: 0,
         scale: 0.8,
         duration: 0.75,
