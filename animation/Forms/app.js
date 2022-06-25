@@ -10,16 +10,32 @@ const end =
   "M1 0.999512C1 0.999512 61.5 7.5 151 7.5C240.5 7.5 301 0.999512 301 0.999512";
 
 // Elastic effect
-containers.forEach(container => {
-  const input = container.querySelector('.input')
-  const line = container.querySelector('.elastic-line')
-  const placeholder = container.querySelector('.placeholder')
+containers.forEach((container) => {
+  const input = container.querySelector(".input");
+  const line = container.querySelector(".elastic-line");
+  const placeholder = container.querySelector(".placeholder");
 
-    input.addEventListener('focus', () => {
-      // Check to see if there is any text in the input
-      if(!input.value) {
-        timeline.fromTo(line, {attr: {d: start}}, {attr: {d:end}, ease: "Power2.easeOut", duration:.75})
-        timeline.to(line, {attr: {d:start}, ease:"elastic.out(2.5, .5)"}, '<50%')
-      }
-    })
-})
+  input.addEventListener("focus", () => {
+    // Check to see if there is any text in the input
+    if (!input.value) {
+      timeline.fromTo(
+        line,
+        { attr: { d: start } },
+        { attr: { d: end }, ease: "Power2.easeOut", duration: 0.75 }
+      );
+      timeline.to(
+        line,
+        { attr: { d: start }, ease: "elastic.out(2.5, .5)" },
+        "<50%"
+      );
+      // Placeholder
+      timeline.to(placeholder, {
+        top: -15,
+        left: 0,
+        scale: 0.7,
+        duration: 0.75,
+        ease: "Power2.easeOut",
+      });
+    }
+  });
+});
