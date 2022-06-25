@@ -74,18 +74,28 @@ form.addEventListener("click", () => {
         }
       }
       // Email validation
-        if (e.target.type === "email") {
-          let valid = validateEmail(e.target.value);
-          if (valid) {
-            // Color
-            colorInput("#6391e8", line, placeholder);
-          } else {
-            colorInput("#fe8c99", line, placeholder);
-          }
+      if (e.target.type === "email") {
+        let valid = validateEmail(e.target.value);
+        if (valid) {
+          // Color
+          colorInput("#6391e8", line, placeholder);
+        } else {
+          colorInput("#fe8c99", line, placeholder);
         }
-      });
+      }
+      // Phone number validation
+      if (e.target.type === "tel") {
+        let valid = validatePhone(e.target.value);
+        if (valid) {
+          // Color
+          colorInput("#6391e8", line, placeholder);
+        } else {
+          colorInput("#fe8c99", line, placeholder);
+        }
+      }
     });
   });
+});
 
 // Email validation
 function validateEmail(email) {
