@@ -63,19 +63,29 @@ form.addEventListener("click", () => {
       }
     }
     // Username validation
-    input.addEventListener('input', (e) => {
-      if(e.target.type === 'text') {
+    input.addEventListener("input", (e) => {
+      if (e.target.type === "text") {
         let inputText = e.target.value;
-        if(inputText.length > 2) {
+        if (inputText.length > 2) {
           // Color
-          colorInput('#6391e8', line, placeholder)
+          colorInput("#6391e8", line, placeholder);
         } else {
           colorInput("#fe8c99", line, placeholder);
         }
       }
-    })
+      // Email validation
+        if (e.target.type === "email") {
+          let valid = validateEmail(e.target.value);
+          if (valid) {
+            // Color
+            colorInput("#6391e8", line, placeholder);
+          } else {
+            colorInput("#fe8c99", line, placeholder);
+          }
+        }
+      });
+    });
   });
-});
 
 // Email validation
 function validateEmail(email) {
@@ -90,6 +100,6 @@ function validatePhone(phone) {
 
 // Color for the input
 function colorInput(color, line, placeholder) {
-  gsap.to(line, {stroke: color, duration: .75})
-  gsap.to(placeholder, {color: color, duration: .75})
+  gsap.to(line, { stroke: color, duration: 0.75 });
+  gsap.to(placeholder, { color: color, duration: 0.75 });
 }
