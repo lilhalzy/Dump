@@ -62,12 +62,15 @@ form.addEventListener("click", () => {
         });
       }
     }
-    // Validation
+    // Username validation
     input.addEventListener('input', (e) => {
       if(e.target.type === 'text') {
         let inputText = e.target.value;
         if(inputText.length > 2) {
           // Color
+          colorInput('#6391e8', line, placeholder)
+        } else {
+          colorInput("#fe8c99", line, placeholder);
         }
       }
     })
