@@ -32,7 +32,7 @@ containers.forEach((container) => {
       timeline.to(placeholder, {
         top: -15,
         left: 0,
-        scale: 0.7,
+        scale: 0.8,
         duration: 0.75,
         ease: "Power2.easeOut",
       });
