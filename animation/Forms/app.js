@@ -35,7 +35,7 @@ containers.forEach((container) => {
         scale: 0.8,
         duration: 0.75,
         ease: "Power2.easeOut",
-      });
+      } , '<10%');
     }
   });
 });
