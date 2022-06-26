@@ -121,3 +121,9 @@ const timeline2 = gsap.timeline ({
 })
 const tickMarkPath = document.querySelector('.tick-mark path')
 const pathLength = tickMarkPath.getTotalLength()
+
+checkbox.addEventListener('click', () => {
+  if(checkbox.checked) {
+    timeline2.to('.checkbox-fill', {top: '0%'})
+  }
+})
