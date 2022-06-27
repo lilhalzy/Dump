@@ -23,6 +23,7 @@ form {
   border-radius: 2rem;
   padding: 5rem 3rem;
   display: flex;
+  position: relative;
 }
 
 .title {
@@ -134,4 +135,12 @@ button {
   font-size: 1.2rem;
   align-self: flex-start;
   cursor: pointer;
+}
+
+#character {
+  position: absolute;
+  transform: scale(1.1) translate(15%, 31%);
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom;
 }
