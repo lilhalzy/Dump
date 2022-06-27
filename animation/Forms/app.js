@@ -115,15 +115,20 @@ function colorInput(color, line, placeholder) {
 }
 
 // Checkbox animation
-const checkbox = document.querySelector('.checkbox')
-const timeline2 = gsap.timeline ({
-  defaults: {duration: 0.5, ease: 'Power2.easeOut'}
-})
-const tickMarkPath = document.querySelector('.tick-mark path')
-const pathLength = tickMarkPath.getTotalLength()
+const checkbox = document.querySelector(".checkbox");
+const timeline2 = gsap.timeline({
+  defaults: { duration: 0.5, ease: "Power2.easeOut" },
+});
+const tickMarkPath = document.querySelector(".tick-mark path");
+const pathLength = tickMarkPath.getTotalLength();
 
-checkbox.addEventListener('click', () => {
-  if(checkbox.checked) {
-    timeline2.to('.checkbox-fill', {top: '0%'})
+checkbox.addEventListener("click", () => {
+  if (checkbox.checked) {
+    timeline2.to(".checkbox-fill", { top: "0%" });
+    timeline2.fromTo(
+      tickMarkPath,
+      { strokeDashoffset: pathLength },
+      { strokeDashoffset: 0 }
+    );
   }
-})
+});
