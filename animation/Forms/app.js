@@ -122,13 +122,22 @@ const timeline2 = gsap.timeline({
 const tickMarkPath = document.querySelector(".tick-mark path");
 const pathLength = tickMarkPath.getTotalLength();
 
+gsap.set(tickMarkPath, {
+  strokeDashoffset: pathLength,
+  strokeDasharray: pathLength,
+});
+
 checkbox.addEventListener("click", () => {
   if (checkbox.checked) {
     timeline2.to(".checkbox-fill", { top: "0%" });
     timeline2.fromTo(
       tickMarkPath,
       { strokeDashoffset: pathLength },
-      { strokeDashoffset: 0 }
+      { strokeDashoffset: 0 }, 
+      '<50%'
     );
+  } else {
+    timeline2.to('.checkbox-fill', {top: '100%'})
+    timeline.fromTo(tickMarkPath, {strokeDashoffset: 0}, {strokeDashoffset: pathLength}, '<50%')
   }
 });
