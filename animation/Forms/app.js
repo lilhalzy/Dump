@@ -136,10 +136,10 @@ checkbox.addEventListener("click", () => {
       { strokeDashoffset: 0 }, 
       '<50%'
     );
-    timeline.to('.checkbox-label', {color: '#6391e8'}, '<')
+    timeline2.to('.checkbox-label', {color: '#6391e8'}, '<')
   } else {
     timeline2.to('.checkbox-fill', {top: '100%'})
-    timeline.fromTo(tickMarkPath, {strokeDashoffset: 0}, {strokeDashoffset: pathLength}, '<50%')
-      timeline.to(".checkbox-label", { color: "#c5c5c5" }, "<");
+    timeline2.fromTo(tickMarkPath, {strokeDashoffset: 0}, {strokeDashoffset: pathLength}, '<50%')
+      timeline2.to(".checkbox-label", { color: "#c5c5c5" }, "<");
   }
 });
