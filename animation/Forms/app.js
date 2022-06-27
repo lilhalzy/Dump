@@ -133,13 +133,33 @@ checkbox.addEventListener("click", () => {
     timeline2.fromTo(
       tickMarkPath,
       { strokeDashoffset: pathLength },
-      { strokeDashoffset: 0 }, 
-      '<50%'
+      { strokeDashoffset: 0 },
+      "<50%"
     );
-    timeline2.to('.checkbox-label', {color: '#6391e8'}, '<')
+    timeline2.to(".checkbox-label", { color: "#6391e8" }, "<");
   } else {
-    timeline2.to('.checkbox-fill', {top: '100%'})
-    timeline2.fromTo(tickMarkPath, {strokeDashoffset: 0}, {strokeDashoffset: pathLength}, '<50%')
-      timeline2.to(".checkbox-label", { color: "#c5c5c5" }, "<");
+    timeline2.to(".checkbox-fill", { top: "100%" });
+    timeline2.fromTo(
+      tickMarkPath,
+      { strokeDashoffset: 0 },
+      { strokeDashoffset: pathLength },
+      "<50%"
+    );
+    timeline2.to(".checkbox-label", { color: "#c5c5c5" }, "<");
   }
 });
+
+// Animating character
+gsap.set("#eye", { transformOrigin: "center" }); //Set the position
+gsap.fromTo(
+  "#eye",
+  { scaleY: 1 },
+  {
+    scaleY: 0.3,
+    repeat: -1,
+    yoyo: true,
+    repeatDelay: 0.5,
+    ease: "Power2.easeOut",
+  }
+);
+gsap.fromTo('#eyebrow', {y: 0}, {y: -1, repeat: -1, yoyo: true, repeatDelay: .5, ease: 'Power2.easeOut'})
