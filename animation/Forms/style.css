@@ -153,7 +153,7 @@ button {
   transform: translate(-50%, -50%);
   color: #777474;
   opacity: 0;
-  font-size: 1rem;
+  font-size: 1.4rem;
   pointer-events: none;
   text-align: center;
 }
