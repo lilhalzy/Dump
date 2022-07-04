@@ -157,3 +157,40 @@ button {
   pointer-events: none;
   text-align: center;
 }
+
+@media screen and (max-width: 812px) {
+  form {
+    width: 80vw;
+    min-height: 80vh;
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+  .title{
+    font-size: 2rem;
+  }
+  p.description {
+    font-size: 1rem;
+  }
+  .contact-right {
+    padding: 0 0 5rem;
+  }
+  .input-container {
+    padding: 0 0 .4rem;
+  }
+  .line-svg {
+    width: 100%;
+  }
+  button {
+    padding: .3rem 1.8rem;
+    margin-top: 1rem;
+  }
+  .placeholder {
+    font-size: 1.1rem;
+  }
+  #character {
+    transform: scale(.4) translate(-40%, 30%);
+  }
+  .submitted {
+    font-size: 1.4rem;
+  }
+}
