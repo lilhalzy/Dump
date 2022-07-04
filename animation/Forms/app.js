@@ -162,19 +162,33 @@ gsap.fromTo(
     ease: "Power2.easeOut",
   }
 );
-gsap.fromTo('#eyebrow', {y: 0}, {y: -1, repeat: -1, yoyo: true, repeatDelay: .5, ease: 'Power2.easeOut'})
+gsap.fromTo(
+  "#eyebrow",
+  { y: 0 },
+  { y: -1, repeat: -1, yoyo: true, repeatDelay: 0.5, ease: "Power2.easeOut" }
+);
 
 // Submit btn
-const btn = document.querySelector('button')
-const timeline3 = gsap.timeline({defaults: {duration: .75, ease: 'Power2.easeOut'}})
+const btn = document.querySelector("button");
+const timeline3 = gsap.timeline({
+  defaults: { duration: 0.75, ease: "Power2.easeOut" },
+});
 
-btn.addEventListener('click', (e) => {
-  e.preventDefault() //Stop the page from refreshes
-  timeline3.to('.contact-right, .contact-left', {
+btn.addEventListener("click", (e) => {
+  e.preventDefault(); //Stop the page from refreshes
+  timeline3.to(".contact-right, .contact-left", {
     y: 30,
     opacity: 0,
-    pointerEvents: 'none',
-  })
-  timeline3.to('form', {scale: .8}, '<')
-  timeline3.fromTo('.submitted', {opacity: 0, y: 30}, {opacity: 1, y: 0})
-})
+    pointerEvents: "none",
+  });
+  timeline3.to("form", { scale: 0.8 }, "<");
+  timeline3.fromTo(".submitted", { opacity: 0, y: 30 }, { opacity: 1, y: 0 });
+  // Hand wave
+  gsap.set("#hand", { transformOrigin: "left" });
+  gsap.fromTo(
+    "#hand",
+    { rotation: 0, y: 0 },
+    { rotation: -10, y: 2, ease: "elastic(3, .3)", duration: 2, delay: 1 }
+  );
+});
+
