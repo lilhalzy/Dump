@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica&family=Poppins&display=swap');
+
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Page presets */
+  --background: #5cdb95;
+  --text: #edf5e1;
+  --darkest-green: #05386b;
+  --dark-green: #379683;
+  --light-green: #78d8c5;
+  --lightest-green: #8ee4af;
+  /* Button presets */
+  --remove-btn: #dd1001;
+  --light-remove-btn: #e2655c;
+}
+
+body {
+  background: var(--background);
+  padding: 200px 300px 0 300px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.first {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 30px;
+}
+
+/* Left table */
+.left {
+  border-radius: 1rem;
+  background: var(--dark-green);
+  padding: 30px;
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  font-family: 'Poppins', sans-serif;
+}
+tbody {
+  color: var(--text);
+  font-family: 'Finlandica', sans-serif;
+}
+
+.buy{
+  background: var(--darkest-green);
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 30px;
+  font-weight: 600;
+  transition: background .2s ease-out 50ms;
+}
+
+.remove{
+  background: var(--remove-btn);
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 30px;
+  font-weight: 600;
+  transition: background .2s ease-out 50ms;
+}
+
+.buy:hover {
+  cursor: pointer;
+  background: var(--light-green);
+}
+
+.buy:active {
+  background: var(--lightest-green);
+}
+
+.remove:hover {
+  cursor: pointer;
+  background: var(--light-remove-btn);
+}
+
+.remove:active {
+  background: var(--lightest-green);
+}
+
+/* right table */
+.second {
+  border-radius: 1rem;
+  background: var(--darkest-green);
+  padding: 30px;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: var(--light-green);
+  font-family: 'Finlandica', sans-serif;
+}
+
+.second-padding {
+  padding: 14px;
+}
+
+.total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px ;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.bold {
+  font-weight: bold;
+  font-family: 'Finlandica', sans-serif;
+  color: var(--light-green);
+}
