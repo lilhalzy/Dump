@@ -5,10 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="./app.js" defer></script>
   </head>
   <body>
-  
+    <div class="first">
+      <div class="left">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Keyboard</td>
+              <td>$55.00</td>
+              <td><button class="buy" onclick="addData({name: 'Keyboard', price: 55})">Buy</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="second">
+        <div class="right second-padding">
+          <div>Keyboard(1x)</div>
+          <button class="remove">Remove</button>
+        </div>
+        <div class="total">
+          <p>Total</p>
+          <div>
+            <p class="bold">$55.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
