@@ -74,17 +74,9 @@ tbody {
   background: var(--light-green);
 }
 
-.buy:active {
-  background: var(--lightest-green);
-}
-
 .remove:hover {
   cursor: pointer;
   background: var(--light-remove-btn);
-}
-
-.remove:active {
-  background: var(--lightest-green);
 }
 
 /* right table */
