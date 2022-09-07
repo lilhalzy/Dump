@@ -26,6 +26,8 @@ const calcResult = () => {
 }
 
 const trolleyRender = () => {
+  emptyElement(trolley)
+
   for(let key in data) {
     let div_item = document.createElement('div')
     let div_btn = document.createElement('div')
@@ -39,5 +41,11 @@ const trolleyRender = () => {
 
     trolley.append(div_item)
     trolley.append(div_btn)
+  }
+}
+
+const emptyElement = (element) => {
+  while(element.firstChild) {
+    element.removeChild(element.firstChild)
   }
 }
