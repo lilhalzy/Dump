@@ -21,26 +21,38 @@
           <tbody>
             <tr>
               <td>Keyboard</td>
-              <td>$55.00</td>
-              <td><button class="buy" onclick="addData({name: 'Keyboard', price: 55})">Buy</button></td>
+              <td>$55</td>
+              <td>
+                <button
+                  class="buy"
+                  onclick="addData({name: 'Keyboard', price: 55})"
+                >
+                  Buy
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Microphone</td>
-              <td>$25.00</td>
-              <td><button class="buy" onclick="addData({name: 'Microphone', price: 25})">Buy</button></td>
+              <td>$25</td>
+              <td>
+                <button
+                  class="buy"
+                  onclick="addData({name: 'Microphone', price: 25})"
+                >
+                  Buy
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="second">
-        <div class="right second-padding">
-          <div>Keyboard(1x)</div>
-          <button class="remove">Remove</button>
+        <div class="right second-padding" id="trolley">
         </div>
         <div class="total">
           <p>Total</p>
-          <div>
-            <p class="bold">$55.00</p>
+          <div id="total">
+            <p class="bold">$0</p>
           </div>
         </div>
       </div>
