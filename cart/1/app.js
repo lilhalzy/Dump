@@ -2,6 +2,7 @@ let data = {}
 let result = {}
 
 let trolley = document.querySelector('#trolley')
+let showtotal = document.querySelector('#total')
 
 const addData = (item) => {
   if (item.name in data) {
@@ -15,6 +16,15 @@ const addData = (item) => {
 
   calcResult()
   trolleyRender()
+  showTotal()
+}
+
+const showTotal = () => {
+  emptyElement(showtotal)
+  let p = document.createElement('p')
+  p.classList.add('bold')
+  p.innerText = `$${result}`
+  showtotal.append(p)
 }
 
 const calcResult = () => {
@@ -25,6 +35,14 @@ const calcResult = () => {
   }
 }
 
+const removeItem = (itemToRemove) => {
+  delete data[itemToRemove]
+
+    calcResult();
+    trolleyRender();
+    showTotal();
+}
+
 const trolleyRender = () => {
   emptyElement(trolley)
 
@@ -33,8 +51,9 @@ const trolleyRender = () => {
     let div_btn = document.createElement('div')
     let btn = document.createElement('button')
     btn.append('Remove')
-    div_item.classList.add('second-padding')
     btn.classList.add('remove')
+    btn.setAttribute('onclick', `removeItem('${key}')`)
+    div_item.classList.add('second-padding')
     div_btn.append(btn)
     
     div_item.innerText = `${key}(${data[key].amount}x)`
